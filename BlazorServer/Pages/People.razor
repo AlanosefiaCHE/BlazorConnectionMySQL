@@ -51,7 +51,7 @@ else
     private async Task InsertData()
     {
         string sql = "insert into people (name, address) values (@name, @address);";
-        await _data.SaveData(sql, new { name = "Alan", address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+        await _data.SaveData(sql, new { name = "Alan", address = "David tenierslaan 99" }, _config.GetConnectionString("default"));
     }
     /// <summary>
     /// Updates the data when you click the button
@@ -61,7 +61,7 @@ else
     {
         string sql = "update people set name = @name where address = @address";
 
-        await _data.SaveData(sql, new { name = "Jan Blaat", address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+        await _data.SaveData(sql, new { name = "Jan Blaat", address = "David tenierslaan 99" }, _config.GetConnectionString("default"));
         // refresh data
         await OnInitializedAsync();
     }
@@ -73,7 +73,7 @@ else
     {
         string sql = "delete from people where address = @address";
 
-        await _data.SaveData(sql, new { address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+        await _data.SaveData(sql, new { address = "David tenierslaan 99" }, _config.GetConnectionString("default"));
     // refresh data
         await OnInitializedAsync();
     }
