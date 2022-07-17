@@ -8,6 +8,10 @@
 @inject IConfiguration _config
 
 <h3>People</h3>
+
+<button class="btn btn-primary" @onclick="InsertData">Insert</button>
+<button class="btn btn-warning" @onclick="UpdateData">Update</button>
+<button class="btn btn-danger" @onclick="DeleteData">Delete</button>
 @if (people == null)
 {
     <p><em>Loading....</em></p>
@@ -15,30 +19,62 @@
 else
 {
    
-
-    @foreach (var p in people)
-    {
-        <table style="width:100%">
-            
+    <table class="table">
+        <thead>
         <tr>
             <th>Name</th>
             <th>Address</th>
         </tr>
-        <tr>
-            <td>@p.name</td>
-            <td>@p.address</td>
-        </tr>
-
-        </table>
-    }
+        </thead>
+        <tbody>
+        @foreach (var p in people)
+        {
+            <tr>
+                <td>@p.name</td>
+                <td>@p.address</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    
   
 }
 @code {
     List<Person> people;
-
+    // This method makes sure that all the data from the database will be loaded into the page
     protected override async Task OnInitializedAsync()
     {
         string sql = "select * from people";
         people = await _data.LoadData<Person,dynamic>(sql , new {},_config.GetConnectionString("default"));
+    }
+    // If you click the button this data will be insert into the database
+    private async Task InsertData()
+    {
+        string sql = "insert into people (name, address) values (@name, @address);";
+        await _data.SaveData(sql, new { name = "Alan", address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+    }
+    /// <summary>
+    /// Updates the data when you click the button
+    /// </summary>
+    /// <returns></returns>
+    private async Task UpdateData()
+    {
+        string sql = "update people set name = @name where address = @address";
+
+        await _data.SaveData(sql, new { name = "Jan Blaat", address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+        // refresh data
+        await OnInitializedAsync();
+    }
+    /// <summary>
+    /// Deletes the data when you click the button
+    /// </summary>
+    /// <returns></returns>
+    private async Task DeleteData()
+    {
+        string sql = "delete from people where address = @address";
+
+        await _data.SaveData(sql, new { address = "Winterkoning 6" }, _config.GetConnectionString("default"));
+    // refresh data
+        await OnInitializedAsync();
     }
 }

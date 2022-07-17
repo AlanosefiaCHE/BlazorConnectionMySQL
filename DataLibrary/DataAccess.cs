@@ -31,7 +31,14 @@ namespace DataLibrary
                 return rows.ToList();
             }
         }
-
+        /// <summary>
+        /// With this method data will be saved into the database
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <param name="connectionString"></param>
+        /// <returns></returns>
         public Task SaveData<T>(string sql, T parameters, string connectionString)
         {
             
