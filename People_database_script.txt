@@ -1,0 +1,67 @@
+CREATE database People;
+use People;
+
+CREATE TABLE `People` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `phone` varchar(100) default NULL,
+  `email` varchar(255) default NULL,
+  `address` varchar(255) default NULL,
+  `country` varchar(100) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Harrison Benton","1-832-577-5488","gravida.sit.amet@outlook.net","Ap #549-5265 Mollis. Rd.","Canada"),
+  ("Veda Schultz","(816) 611-6945","dui.suspendisse.ac@google.net","418-7244 Lacinia St.","Brazil"),
+  ("Neil Richard","1-875-823-8753","lorem.vitae@aol.ca","Ap #142-6847 Augue Rd.","Italy"),
+  ("Fuller Mejia","1-878-678-8562","sociis.natoque.penatibus@icloud.org","P.O. Box 459, 8257 Interdum. Road","Poland"),
+  ("Basil Maxwell","1-756-497-9254","ornare@protonmail.com","Ap #790-8559 Vulputate, Ave","Australia");
+  
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Evelyn Everett","1-860-663-0153","curabitur@hotmail.net","Ap #510-436 Mi Rd.","Russian Federation"),
+  ("Quentin Moran","(416) 901-5464","turpis.nulla@outlook.com","822-4940 Leo. Rd.","Austria"),
+  ("Madonna Cannon","(453) 254-4147","gravida@hotmail.org","590-8910 Ipsum. Avenue","Spain"),
+  ("Brandon Deleon","1-946-308-3168","ut.sem@aol.ca","1514 Aliquam Street","Costa Rica"),
+  ("Suki Carr","(273) 744-4244","sit@aol.net","P.O. Box 659, 8068 Cursus. Road","Chile");
+  
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Lynn Chaney","(148) 442-5748","maecenas.iaculis@yahoo.net","340 Dapibus Avenue","Mexico"),
+  ("Aiko Jarvis","(382) 326-7346","sociis.natoque@yahoo.ca","P.O. Box 131, 9260 Fermentum Ave","China"),
+  ("Dante Paul","(516) 726-2056","gravida.praesent.eu@icloud.net","P.O. Box 683, 712 Justo. Rd.","South Africa"),
+  ("Ainsley Pruitt","1-276-427-4468","nec@aol.ca","778-2305 Cum Ave","Belgium"),
+  ("Diana Rivas","(457) 146-0173","sapien.molestie@protonmail.couk","P.O. Box 191, 2072 Magna, Ave","Ukraine");
+
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Shana Pugh","(611) 325-6738","praesent.eu@yahoo.com","738-6306 Vitae Road","Nigeria"),
+  ("Orli Leblanc","(524) 772-7982","phasellus.vitae@protonmail.com","Ap #275-8124 Libero Road","Vietnam"),
+  ("Isadora Mccray","(285) 555-7782","tincidunt.orci.quis@google.net","654-352 In Rd.","Vietnam"),
+  ("Raymond Peters","1-768-332-5875","convallis.est@icloud.edu","458-8793 Sed Ave","Philippines"),
+  ("Cullen Santana","(781) 335-4488","est@yahoo.net","175-4561 Tellus St.","South Africa");
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Cullen Mcdaniel","1-374-364-1877","sapien.nunc.pulvinar@yahoo.org","248-8774 Nulla Street","Mexico"),
+  ("Glenna Pollard","(497) 553-6814","ridiculus.mus@google.edu","961-6655 Nulla. Rd.","Germany"),
+  ("Zorita Kelly","(855) 738-3445","placerat.cras.dictum@outlook.org","323-7104 Dolor. Street","France"),
+  ("Thor Hawkins","(715) 751-1779","mollis.phasellus@google.org","P.O. Box 822, 936 Aliquam Av.","Germany"),
+  ("Steven Franklin","1-592-667-9431","in.ornare@icloud.ca","976-2581 Sapien. Av.","France");
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Athena Shields","1-554-133-8655","non.sapien@outlook.net","P.O. Box 749, 5294 Morbi St.","Austria"),
+  ("Debra Burks","(497) 751-2108","nibh.donec@outlook.net","Ap #732-7132 In St.","Turkey"),
+  ("Scarlett Moody","1-350-751-7817","non.dapibus.rutrum@outlook.couk","P.O. Box 800, 6805 Magna. Avenue","Colombia"),
+  ("Nomlanga Lindsey","(271) 470-4365","ultrices@icloud.couk","Ap #366-7996 Bibendum. Ave","Vietnam"),
+  ("Emerson Hoover","1-457-201-3723","tincidunt.adipiscing@google.org","7225 Eu Rd.","Turkey");
+INSERT INTO `People` (`name`,`phone`,`email`,`address`,`country`)
+VALUES
+  ("Fleur Schroeder","1-849-244-3161","quis@hotmail.ca","Ap #180-7834 Dignissim Ave","Sweden"),
+  ("Harriet Hayes","1-553-387-5935","malesuada.id@yahoo.edu","P.O. Box 538, 2497 Nec, Street","Ireland"),
+  ("Felicia Roman","(372) 112-4447","odio.semper@yahoo.com","Ap #310-9156 Hendrerit Road","Austria"),
+  ("Cade Oneal","(798) 267-6368","metus@hotmail.edu","Ap #818-3722 Nec Rd.","Nigeria"),
+  ("Gwendolyn Porter","(244) 486-9659","at.iaculis.quis@protonmail.edu","P.O. Box 269, 9535 Proin Ave","New Zealand");
+
